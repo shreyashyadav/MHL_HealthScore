@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Risk Assessment Result</title>
+</head>
+<body>
+    <h1>Health Risk Assessment Result</h1>
+    <p>Your health score is: {{ score }}</p>
+    <p>Recommendation: {{ recommendation }}</p>
+
+    <h2>Do you want to check tests based on symptoms?</h2>
+    <form action="{{ url_for('handle_symptom_question') }}" method="post">
+        <input type="hidden" name="score" value="{{ score }}">
+        <input type="hidden" name="recommendation" value="{{ recommendation }}">
+        <button type="submit" name="choice" value="yes">Yes</button>
+        <button type="submit" name="choice" value="no">No</button>
+    </form>
+</body>
+</html>

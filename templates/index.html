@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Risk Assessment</title>
+</head>
+<body>
+    <h1>Health Risk Assessment / Health Score Calculator</h1>
+    <form action="/submit" method="post">
+        <!-- Demographic Information -->
+        <h2>Demographic Information</h2>
+        Age:
+        <select name="age">
+            <option value="1">Under 30</option>
+            <option value="2">30-50</option>
+            <option value="3">Over 50</option>
+        </select><br>
+        Sex:
+        <select name="sex">
+            <option value="1">Male</option>
+            <option value="1">Female</option>
+        </select><br>
+        Region (a):
+        <select name="region_a">
+            <option value="1">Low-risk region</option>
+            <option value="2">Moderate-risk region</option>
+            <option value="3">High-risk region</option>
+        </select><br>
+        Region (b):
+        <select name="region_b">
+            <option value="2">Urban</option>
+            <option value="1">Suburban</option>
+            <option value="1">Rural</option>
+        </select><br>
+        <!-- Physical Measurements -->
+        <h2>Physical Measurements</h2>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" name="weight" id="weight" step="0.1" required><br>
+        <label for="height">Height (m):</label>
+        <input type="number" name="height" id="height" step="0.01" required><br>
+
+        <!-- Medical History -->
+        <h2>Medical History</h2>
+        Chronic Conditions:
+        <select name="chronic_conditions">
+            <option value="0">None</option>
+            <option value="3">One chronic condition</option>
+            <option value="5">Multiple chronic conditions</option>
+        </select><br>
+        Family Medical History:
+        <select name="family_history">
+            <option value="1">No family history of chronic diseases</option>
+            <option value="3">Family history of one chronic disease</option>
+            <option value="5">Family history of multiple chronic diseases</option>
+        </select><br>
+        Surgeries:
+        <select name="surgeries">
+            <option value="0">None</option>
+            <option value="1">Minor surgery</option>
+            <option value="3">Major surgery</option>
+        </select><br>
+        Hospitalizations:
+        <select name="hospitalizations">
+            <option value="0">None</option>
+            <option value="3">Hospitalized within the last year</option>
+        </select><br>
+        Medications:
+        <select name="medications">
+            <option value="0">No medication</option>
+            <option value="3">Taking medications</option>
+        </select><br>
+        <!-- Lifestyle Factors -->
+        <h2>Lifestyle Factors</h2>
+        Smoking:
+        <select name="smoking">
+            <option value="0">Non-smoker</option>
+            <option value="2">Light smoker (1-5 cigarettes/day)</option>
+            <option value="5">Heavy smoker (>5 cigarettes/day)</option>
+        </select><br>
+        Alcohol Consumption:
+        <select name="alcohol">
+            <option value="0">None</option>
+            <option value="2">Moderate (1-7 drinks/week)</option>
+            <option value="5">Heavy ( > 1-7 drinks/week)</option>
+        </select><br>
+        Physical Exercise:
+        <select name="exercise">
+            <option value="1">Regular exercise (5+ times/week)</option>
+            <option value="3">Occasional exercise (1-4 times/week)</option>
+            <option value="5">Rarely or never exercises</option>
+        </select><br>
+        Dietary Habits:
+        <select name="diet">
+            <option value="1">Balanced diet</option>
+            <option value="3">Occasionally unhealthy</option>
+            <option value="5">Unhealthy diet</option>
+        </select><br>
+        Sleep Patterns:
+        <select name="sleep">
+            <option value="1">7-9 hours of sleep</option>
+            <option value="3">5-6 hours or 10+ hours</option>
+            <option value="5">Less than 5 hours</option>
+        </select><br>
+        Stress Levels:
+        <select name="stress">
+            <option value="1">Low</option>
+            <option value="3">Moderate</option>
+            <option value="5">High</option>
+        </select><br>
+        Substance Use:
+        <select name="substance_use">
+            <option value="0">No substance use</option>
+            <option value="3">Occasional use</option>
+            <option value="5">Frequent use</option>
+        </select><br>
+        <!-- Current Health Status -->
+        <h2>Current Health Status</h2>
+        Symptoms:
+        <select name="symptoms">
+            <option value="0">None</option>
+            <option value="2">Mild (e.g., occasional headache)</option>
+            <option value="4">Moderate (e.g., regular fatigue)</option>
+            <option value="6">Severe (e.g., chronic pain)</option>
+        </select><br>
+        Recent Illnesses:
+        <select name="recent_illnesses">
+            <option value="0">None</option>
+            <option value="1">Minor illness</option>
+            <option value="3">Major illness</option>
+        </select><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
